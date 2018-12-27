@@ -1,0 +1,63 @@
+{
+    "name": "rewrite-css-pubilcpath-webpack-plugin",
+    "version": "1.0.0",
+    "description": "rewrite css publicPath",
+    "main": "./lib/index.js",
+    "scripts": {
+        "test": "jest --config jest.config.js",
+        "release": "release-it"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/longshihui/rewrite-css-publicpath-webpack-plugin.git"
+    },
+    "keywords": [
+        "webpack",
+        "plugin",
+        "rewrite",
+        "css",
+        "publicPath"
+    ],
+    "author": "colorless",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/longshihui/rewrite-css-publicpath-webpack-plugin/issues"
+    },
+    "homepage": "https://github.com/longshihui/rewrite-css-publicpath-webpack-plugin#readme",
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.2.3",
+        "babel-loader": "^8.0.4",
+        "clean-webpack-plugin": "^1.0.0",
+        "commitizen": "^3.0.5",
+        "css-loader": "^2.1.0",
+        "cz-conventional-changelog": "^2.1.0",
+        "html-webpack-plugin": "^3.2.0",
+        "husky": "^1.2.1",
+        "jest": "^23.6.0",
+        "jsdom": "^13.1.0",
+        "lint-staged": "^8.1.0",
+        "mini-css-extract-plugin": "^0.5.0",
+        "prettier": "^1.15.3",
+        "release-it": "^9.3.0",
+        "webpack": "^4.28.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.{js,vue,json,css,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "dependencies": {}
+}
